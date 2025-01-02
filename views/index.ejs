@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <nav>
+        <h1>Sudoku</h1>
+    </nav>
+
+</head>
+
+<body>
+    <div class="grid">
+        <div class="board">
+            <% for( let i = 0; i < board.length; i++ ) { %>
+                
+                <% for( let j = 0; j < board[i].length; j++ ) { %>
+
+                    <% if((j===2 && i==2) || (i===5 && j===5)||(i===2 && j===5)||(i===5 && j===2)){%>
+                        <div class="block grid vertical-line horizontal-line" id="<%= i.toString()+j.toString() %>">
+                            <%= board[i][j] %>
+                        </div>
+                    <% } else if (i===2 || i === 5) { %>
+
+                        <div class="block grid vertical-line" id="<%= i.toString()+j.toString() %>">
+                            <%= board[i][j] %>
+                        </div>
+                    <% } else if (j===2 || j===5){%>
+                    <div class="block grid horizontal-line" id="<%= i.toString()+j.toString() %>">
+                        <%= board[i][j] %>
+                    </div>
+                     
+                    <% } else {%>
+                        <div class="block grid" id="<%= i.toString()+j.toString() %>">
+                            <%= board[i][j] %>
+                            
+                        </div>
+
+                    <% } %>
+                <% } %>
+
+            <% } %>
+        </div>
+    </div>
+    <div class="digits">
+
+        <% for(let num = 1;num<=9;num++){%>
+        <button id="<%= num %>" class="number-btn"><%= num %></button>
+        <% } %>
+    </div>
+
+</body>
+
+</html>
+<footer>
+    <script src="front.js"></script>
+    <p>By Obakeng Mogale</p>
+</footer>
