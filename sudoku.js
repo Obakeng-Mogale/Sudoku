@@ -1,6 +1,5 @@
 export {
     generateSudokuBoard,
-    validateBoard,
     solveSudoku
 }
 

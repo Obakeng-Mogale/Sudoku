@@ -30,7 +30,7 @@ function selectNumber(){
            
             if (element.innerHTML === this.innerHTML && this.id != element.id && this.innerHTML!="" ){
                
-                element.classList.add("darker-highlight");
+                element.classList.add("num-darker-highlight");
             };
             let startRow = Math.floor(row/3)*3+(i%3);
             let startCol = Math.floor(col/3)*3+(j%3);
@@ -57,7 +57,7 @@ function unhighlight(row,col,num){
             const element = document.getElementById(i.toString()+j.toString())
             console.log(this.innerHTML)
             if (element.innerHTML === num){
-                element.classList.remove("darker-highlight");
+                element.classList.remove("num-darker-highlight");
             };
             let startRow = Math.floor(row/3)*3+(i%3)
             let startCol = Math.floor(col/3)*3+(j%3)

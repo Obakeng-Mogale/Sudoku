@@ -1,6 +1,6 @@
 import express from "express"
 import ejs from "ejs"
-import { generateSudokuBoard } from "./sudoku"
+import { generateSudokuBoard } from "./sudoku.js"
 //Imports
 const app = express()
 
