@@ -17,7 +17,9 @@ body{
     margin:0;
     text-align: center;
 }
-
+.title{
+    font-size: xx-large;
+}
 .board{
     margin: 2rem 0;
     width: fit-content;
@@ -40,7 +42,7 @@ body{
     width: 3rem;
     height: 3rem;
     border-radius: 0.5rem;
-    border-width:1px;
+    border:1px solid;
     background-color: #F8FAFC;
 }
 .number-btn:hover{
@@ -63,8 +65,9 @@ body{
 .vertical-line{
     border-bottom: 2px solid black;
 }
-/* <% if (board[i][j]===null) { %>
-                        
-    <% } else { %>
-        <div class="block" id="<%= i.toString()+j.toString() %>"><%= board[i][j] %></div>
-    <% } %> */
+.highlight{
+    background-color: #c2c2c2;
+}
+.lighter-highlight{
+    background-color: #e7e7e7;
+}

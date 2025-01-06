@@ -20,24 +20,15 @@
                 <% for( let j = 0; j < board[i].length; j++ ) { %>
 
                     <% if((j===2 && i==2) || (i===5 && j===5)||(i===2 && j===5)||(i===5 && j===2)){%>
-                        <div class="block grid vertical-line horizontal-line" id="<%= i.toString()+j.toString() %>">
-                            <%= board[i][j] %>
-                        </div>
+                        <div class="block grid vertical-line horizontal-line" id="<%= i.toString()+j.toString() %>"><%= board[i][j] %></div>
                     <% } else if (i===2 || i === 5) { %>
 
-                        <div class="block grid vertical-line" id="<%= i.toString()+j.toString() %>">
-                            <%= board[i][j] %>
-                        </div>
+                        <div class="block grid vertical-line" id="<%= i.toString()+j.toString() %>"><%= board[i][j] %></div>
                     <% } else if (j===2 || j===5){%>
-                    <div class="block grid horizontal-line" id="<%= i.toString()+j.toString() %>">
-                        <%= board[i][j] %>
-                    </div>
+                    <div class="block grid horizontal-line" id="<%= i.toString()+j.toString() %>"><%= board[i][j] %></div>
                      
                     <% } else {%>
-                        <div class="block grid" id="<%= i.toString()+j.toString() %>">
-                            <%= board[i][j] %>
-                            
-                        </div>
+                        <div class="block grid" id="<%= i.toString()+j.toString() %>"><%= board[i][j] %></div>
 
                     <% } %>
                 <% } %>

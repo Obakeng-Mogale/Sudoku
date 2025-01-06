@@ -29,6 +29,14 @@ var board = [
 app.get('/',function(req,res){
     res.render('index.ejs',{board:board})
 })
+app.post('/',function(req,res){
+    const btn = req.query.button
+    if (btn===sol_board[i][j]){
+        board[i][j]=btn
+    }
+    board = board
+    res.render('index.ejs',{board:board})
+})
 
 app.listen(3000,()=>{
     console.log("app open on port 3000")
