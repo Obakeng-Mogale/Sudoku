@@ -1,6 +1,7 @@
 export {
     generateSudokuBoard,
-    validateBoard
+    validateBoard,
+    solveSudoku
 }
 
 function generateSudokuBoard() {
@@ -19,7 +20,7 @@ function generateSudokuBoard() {
             
         }
     }
-    if (solveSudoku(board))
+    if (validateSudoku(board))
         return board
 }
 

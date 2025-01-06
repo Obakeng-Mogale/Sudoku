@@ -20,6 +20,10 @@ body{
 .title{
     font-size: xx-large;
 }
+div,button.number-btn{
+
+    font-size: larger;
+}
 .board{
     margin: 2rem 0;
     width: fit-content;
@@ -66,8 +70,8 @@ body{
     border-bottom: 2px solid black;
 }
 .highlight{
-    background-color: #c2c2c2;
+    background-color: #9dcbff !important;
 }
-.lighter-highlight{
-    background-color: #e7e7e7;
+.darker-highlight{
+    background-color: #dfecfa;
 }
